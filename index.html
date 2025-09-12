@@ -7,7 +7,7 @@
       font-family: Helvetica, Arial, sans-serif;
       text-align: center;
     }
-    .rainbow {font-size: 3em;} /* increase size, try 2em–5em */
+    .rainbow {font-size: 6em;} /* increase size, try 2em–5em */
     .rainbow span.red    { color: red; }
     .rainbow span.orange { color: orange; }
     .rainbow span.yellow { color: gold; }
@@ -16,9 +16,11 @@
     .rainbow span.indigo { color: indigo; }
     .rainbow span.violet { color: violet; }
 
-    img {
+    .full-img {
       display: block;
-      margin: 0 auto; /* ensures the image itself is centered */
+      width: calc(100% - 40px); /* full width minus padding (20px each side) */
+      margin: 20px auto;      /* vertical padding & centered horizontally */
+      max-width: 100%;        /* prevents overflow */
     }
   </style>
 </head>
@@ -43,13 +45,6 @@
 
     document.getElementById("rainbow-text").innerHTML = html;
   </script>
-  <img src="image.jpg" alt="07654 960772" width="800">
+  <img src="image.jpg" alt="07654 960772" class="full-img">
 </body>
 </html>
-
-
-
-
-
-<!-- <img src="image.jpg" alt="07654 960772" width="300"> -->
-
