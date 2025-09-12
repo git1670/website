@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>I am gay</title>
+  <style>
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+      text-align: center;
+    }
+    .rainbow {font-size: 3em;} /* increase size, try 2em–5em */
+    .rainbow span.red    { color: red; }
+    .rainbow span.orange { color: orange; }
+    .rainbow span.yellow { color: gold; }
+    .rainbow span.green  { color: green; }
+    .rainbow span.blue   { color: blue; }
+    .rainbow span.indigo { color: indigo; }
+    .rainbow span.violet { color: violet; }
+
+    img {
+      display: block;
+      margin: 0 auto; /* ensures the image itself is centered */
+    }
+  </style>
+</head>
+<body>
+  <h1 class="rainbow" id="rainbow-text"></h1>
+
+  <script>
+    const text = "I am gay."; // put your sentence here
+    const colors = ["red","orange","yellow","green","blue","indigo","violet"];
+
+    let html = "";
+    let colorIndex = 0;
+
+    for (let char of text) {
+      if (char === " ") {
+        html += " "; // keep the space, don’t increment color
+      } else {
+        html += `<span class="${colors[colorIndex]}">${char}</span>`;
+        colorIndex = (colorIndex + 1) % colors.length;
+      }
+    }
+
+    document.getElementById("rainbow-text").innerHTML = html;
+  </script>
+  <img src="image.jpg" alt="07654 960772" width="400">
+</body>
+</html>
+
+
+
+
+
+<!-- <img src="image.jpg" alt="07654 960772" width="300"> -->
+
