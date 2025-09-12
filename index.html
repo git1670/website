@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>I am gay</title>
+  <title>I am gay... online</title>
   <style>
     body {
       font-family: Helvetica, Arial, sans-serif;
@@ -16,16 +16,30 @@
     .rainbow span.indigo { color: indigo; }
     .rainbow span.violet { color: violet; }
 
-    .full-img {
+    .image-container {
+      position: relative;
+      width: 300px;   /* adjust to match your image width */
+      margin: 0 auto; /* centers the container */
+    }
+
+    .text-image {
       display: block;
-      width: calc(100% - 40px); /* full width minus padding (20px each side) */
-      margin: 20px auto;      /* vertical padding & centered horizontally */
-      max-width: 100%;        /* prevents overflow */
+      width: 100%;
+      position: relative;
+      z-index: 2; /* keeps it on top */
+    }
+
+    .face-image {
+      position: absolute;
+      top: 20%; /* shift down 30% of container height */
+      left: 0;
+      width: 100%;
+      z-index: 1; /* behind top image */
     }
   </style>
 </head>
 <body>
-  <h1 class="rainbow" id="rainbow-text"></h1>
+  <!-- <h1 class="rainbow" id="rainbow-text"></h1>
 
   <script>
     const text = "I am gay."; // put your sentence here
@@ -44,7 +58,15 @@
     }
 
     document.getElementById("rainbow-text").innerHTML = html;
-  </script>
-  <img src="image.jpg" alt="07654 960772" class="full-img">
+  </script> -->
+  <img src="title_image.png" class="text-image">
+  <img src="face_image.jpg" class="face-image">
 </body>
 </html>
+
+
+
+
+
+<!-- <img src="image.jpg" alt="07654 960772" width="300"> -->
+
