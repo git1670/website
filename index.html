@@ -44,15 +44,13 @@
       animation: pulse 2.5s infinite;
     }
 
-    .phone-text {
+    .bottom-image {
       position: fixed;
       bottom: 0;
       left: 0;
-      width: 100%;            /* span full width */
-      color: black;           /* text color */
-      text-align: center;     /* center the text */
-      font-size: 4em;
-      z-index: 2;
+      width: 100%;     /* make it span across */
+      height: auto;    /* keep aspect ratio */
+      z-index: 2;     /* optional: keep it behind other content */
     }
   </style>
 </head>
@@ -79,9 +77,7 @@
   </script> -->
   <img src="title_image.png" class="text-image">
   <img src="face_image.jpg" class="face-image">
-  <div class="phone-text">
-    07467 792293
-  </div>
+  <img src="phone_number.png" class="bottom-image">
 </body>
 </html>
 
