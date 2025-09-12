@@ -29,12 +29,19 @@
       z-index: 2; /* keeps it on top */
     }
 
+    @keyframes pulse {
+      0%   { transform: scale(1); }
+      50%  { transform: scale(1.1); } /* grow 10% */
+      100% { transform: scale(1); }
+    }
+
     .face-image {
       position: absolute;
-      top: 20%; /* shift down 30% of container height */
+      top: 30%; /* shift down 30% of container height */
       left: 0;
       width: 100%;
       z-index: 1; /* behind top image */
+      animation: pulse 1.5s infinite;
     }
   </style>
 </head>
